@@ -425,10 +425,10 @@ def show_structure_3d_widget(pdb_data, title="Structure", height=450, width=700)
 # --------------------
 # Streamlit app (two pages) with persistent header
 # --------------------
-st.set_page_config(layout="wide", page_title="RNALig — RNA–Ligand Affinity Predictor")
+st.set_page_config(layout="wide", page_title="RNALig — RNA–Ligand Binding Affinity Predictor")
 
 # Header display (logo + title) - shown on all pages
-def display_header(logo_filename="logo.png", title="RNALig — The RNA–Ligand Feature Extractor & Binding Affinity Predictor"):
+def display_header(logo_filename="logo.png", title="RNALig — The RNA–Ligand Binding Affinity Predictor"):
     # try multiple locations for logo: local folder, /mnt/data
     possible_paths = [
         os.path.join(os.getcwd(), logo_filename),
@@ -519,7 +519,7 @@ if page == "🏠 Home":
 
 # ----------------- PREDICT PAGE -----------------
 elif page == "🔮 Predict":
-    st.title("Predict Binding Affinity with RNALig")
+    st.title("Predict Binding Affinity")
     st.write("Upload single PDB(s), a ZIP of many PDBs, or fetch a PDB from RCSB. If a PDB contains multiple ligands, choose the ligand using chain + residue number.")
 
     # Try to load model & preprocessors (lazy load)
