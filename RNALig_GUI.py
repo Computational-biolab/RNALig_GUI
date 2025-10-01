@@ -13,8 +13,6 @@ import io
 import json
 import re
 import RNA
-!apt-get install -y vienna-rna
-!pip install biopython mdanalysis py3Dmol
 from Bio.PDB import PDBParser
 import MDAnalysis as mda
 from scipy.spatial.distance import cdist
