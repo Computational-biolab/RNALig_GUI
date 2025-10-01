@@ -9,4 +9,4 @@ biopython==1.85
 py3Dmol==2.5.3
 pubchempy==1.0.5
 rdkit==2025.3.6
-MDAnalysis
+MDAnalysis==2.9.0
