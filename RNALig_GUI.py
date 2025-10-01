@@ -445,7 +445,7 @@ def display_header(logo_filename="logo.png", title="RNALig: RNA–Ligand Binding
     with cols[1]:
         if logo_path:
             try:
-                st.image(logo_path, width=320)  # larger logo
+                st.image(logo_path, width=400)  # larger logo
             except Exception:
                 st.image(logo_path, use_column_width=True)
         st.markdown(f"## {title}")
