@@ -457,7 +457,7 @@ st.sidebar.title("RNALig Navigation")
 page = st.sidebar.radio("Go to", ["🏠 Home", "🔮 Predict"])
 
 # ----------------- HOMEPAGE -----------------
-if page == "Home":
+if page == "🏠 Home":
     st.markdown(
         """
         Welcome to **RNALig** 
@@ -518,7 +518,7 @@ if page == "Home":
     st.markdown("📧 **Contact:** computationalBioLab@gmail.com")
 
 # ----------------- PREDICT PAGE -----------------
-elif page == "Predict":
+elif page == "🔮 Predict":
     st.title("Predict Binding Affinity")
     st.write("Upload single PDB(s), a ZIP of many PDBs, or fetch a PDB from RCSB. If a PDB contains multiple ligands, choose the ligand using chain + residue number.")
 
