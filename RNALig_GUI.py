@@ -141,45 +141,17 @@ def extract_rna_features(pdb_file, pdb_id):
         features_out['minimum_free_energy'] = None
         return features_out
 
+    # --- Minimum free energy (MFE) via ViennaRNA Python API ---
     mfe_val = None
-    rnafold_path = shutil.which("RNAfold")
-    if rnafold_path:
-        try:
-            proc = subprocess.run(
-                [rnafold_path, "--noPS"],
-                input=rna_sequence,
-                capture_output=True,
-                text=True,
-                check=False,
-                timeout=20
-            )
-            stdout = proc.stdout.strip().splitlines()
-            if len(stdout) >= 2:
-                struct_line = stdout[1].strip()
-                if '(' in struct_line and ')' in struct_line:
-                    try:
-                        last_open = struct_line.rfind('(')
-                        last_close = struct_line.rfind(')')
-                        mfe_str = struct_line[last_open+1:last_close].strip()
-                        mfe_num = mfe_str.split()[0]
-                        mfe_val = float(mfe_num)
-                    except Exception:
-                        mfe_val = None
-            else:
-                combined = " ".join(stdout)
-                m = re.search(r'\((-?\d+\.?\d*)\)', combined)
-                if m:
-                    try:
-                        mfe_val = float(m.group(1))
-                    except Exception:
-                        mfe_val = None
-        except Exception:
-            mfe_val = None
-    else:
+    try:
+        ss, mfe_val = RNA.fold(rna_sequence)
+        mfe_val = float(mfe_val)
+    except Exception:
         mfe_val = None
 
     features_out['minimum_free_energy'] = mfe_val
     return features_out
+
 
 def detect_ligands_with_chain(pdb_file):
     structure = parser.get_structure("Structure", pdb_file)
