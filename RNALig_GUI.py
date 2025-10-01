@@ -35,7 +35,6 @@ from Bio.PDB import Select
 import tempfile, subprocess
 import MDAnalysis as mda
 import py3Dmol
-from IPython.display import HTML, display
 from rdkit.Chem import rdmolfiles
 
 # --------------------
