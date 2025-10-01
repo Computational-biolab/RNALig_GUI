@@ -12,7 +12,7 @@ import zipfile
 import io
 import json
 import re
-import RNA
+import RNAfold
 from Bio.PDB import PDBParser, PDBIO
 import MDAnalysis as mda
 from scipy.spatial.distance import cdist
