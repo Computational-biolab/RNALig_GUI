@@ -23,6 +23,22 @@ from rdkit.Chem import Lipinski, Crippen, rdMolDescriptors
 from rdkit.Chem.rdMolDescriptors import CalcExactMolWt
 import pubchempy as pcp
 import py3Dmol
+from rdkit import Chem
+from rdkit.Chem import Descriptors, Lipinski, Crippen, rdMolDescriptors
+from Bio.PDB import PDBParser
+import MDAnalysis as mda
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
+import joblib
+from Bio.PDB import PDBParser, PDBIO
+from Bio.PDB import Select
+import tempfile, subprocess
+import MDAnalysis as mda
+import py3Dmol
+from IPython.display import HTML, display
+from rdkit.Chem import rdmolfiles
 
 # --------------------
 # Configuration + Caches
