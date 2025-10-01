@@ -11,3 +11,4 @@ pubchempy==1.0.5
 rdkit==2025.3.6
 MDAnalysis==2.9.0
 ViennaRNA==2.7.0
+RNAfold==2.7.0
