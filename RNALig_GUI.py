@@ -13,7 +13,7 @@ import io
 import json
 import re
 import RNA
-from Bio.PDB import PDBParser
+from Bio.PDB import PDBParser, PDBIO
 import MDAnalysis as mda
 from scipy.spatial.distance import cdist
 from rdkit import Chem
@@ -29,12 +29,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
-import joblib
 from Bio.PDB import PDBParser, PDBIO
 from Bio.PDB import Select
-import tempfile, subprocess
-import MDAnalysis as mda
-import py3Dmol
 
 # --------------------
 # Configuration + Caches
