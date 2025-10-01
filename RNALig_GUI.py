@@ -12,7 +12,7 @@ import zipfile
 import io
 import json
 import re
-import ViennaRNA
+import RNA
 from Bio.PDB import PDBParser
 import MDAnalysis as mda
 from scipy.spatial.distance import cdist
