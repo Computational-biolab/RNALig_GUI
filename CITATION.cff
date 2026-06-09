@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: RNALigGUI
+message: If you use RNALigGUI, please cite our publication.
+authors:
+  - family-names: Sharma
+    given-names: Priyanka
+  - family-names: Gupta
+    given-names: Tushar
+  - family-names: Latha
+    given-names: N.
+  - family-names: Pant
+    given-names: Pradeep
