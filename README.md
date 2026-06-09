@@ -1,45 +1,128 @@
-# RNALigGUI
+<p align="center">
+  <img src="logo.png" alt="RNALigGUI Logo" width="300">
+</p>
 
-RNALigGUI is a web-based graphical interface for analyzing RNA–ligand molecular dynamics trajectories using the RNALig scoring framework. The platform enables frame-wise binding affinity prediction, trajectory analysis, and visualization of RNA–ligand interaction dynamics from molecular dynamics simulations.
+<h1 align="center">RNALigGUI</h1>
 
-## Features
+<p align="center">
+  <b>RNA–Ligand Binding Affinity Prediction and MD Trajectory Analysis Platform</b>
+</p>
 
-* Upload single RNA–ligand complexes or multiple trajectory frames
-* Batch processing using ZIP archives
-* Frame-wise binding affinity prediction
-* Analysis of temporal changes in RNA–ligand interactions
-* Interactive visualization of prediction results
-* Exportable prediction reports
+<p align="center">
+  <a href="https://rnalig-gui.streamlit.app">🌐 Web Server</a>
+</p>
+
+---
+
+## Overview
+
+RNALigGUI is a web-based platform for RNA–ligand binding affinity prediction and molecular dynamics (MD) trajectory analysis using the RNALig machine-learning framework. The platform provides an intuitive graphical interface for predicting RNA–ligand binding free energies and analyzing conformational ensembles generated from molecular dynamics simulations.
+
+In addition to single-structure prediction, RNALigGUI supports batch processing of trajectory frames through ZIP-file uploads, enabling users to investigate the temporal evolution of RNA–ligand interactions throughout MD simulations.
+
+---
+
+## Key Features
+
+- RNA–ligand binding affinity prediction
+- Support for PDB and mmCIF structures
+- Batch processing of multiple trajectory frames
+- ZIP file upload for MD trajectory analysis
+- Frame-wise binding affinity prediction
+- Averaged binding affinity estimation (RNALig_Frames)
+- Interactive 3D molecular visualization
+- Downloadable prediction reports
+- User-friendly web interface
+
+---
 
 ## Workflow
 
-1. Upload RNA–ligand complex structures or MD trajectory frames.
-2. Extract structural and physicochemical descriptors.
-3. Predict frame-wise binding affinities using RNALig.
-4. Generate summary statistics and visualizations.
-5. Download prediction results.
+1. Upload an RNA–ligand complex (PDB/mmCIF) or a ZIP archive containing MD trajectory frames.
+2. Automatic structure preprocessing.
+3. Extraction of structural and physicochemical descriptors.
+4. RNALig-based binding affinity prediction.
+5. Visualization and download of prediction results.
 
-## Example Input
+---
 
-A ZIP archive containing multiple RNA–ligand complex structures extracted from an MD trajectory.
+## Input Formats
 
-## Example Output
+### Single Structure Prediction
 
-* Frame-wise binding affinity predictions
-* Average binding affinity (RNALig_Frames)
-* Visualization of affinity fluctuations across the trajectory
+- `.pdb`
+- `.cif`
+
+### MD Trajectory Analysis
+
+- ZIP archive containing multiple RNA–ligand complex structures extracted from MD trajectories
+
+---
+
+## Output
+
+RNALigGUI provides:
+
+- Predicted binding free energy (ΔG)
+- RNA descriptors
+- Ligand descriptors
+- RNA–ligand interaction features
+- Frame-wise affinity predictions
+- Averaged trajectory affinity estimates
+- Interactive visualization
+- Downloadable results
+
+---
+
+## Web Server
+
+🌐 https://rnalig-gui.streamlit.app
+
+---
+
+## Example Applications
+
+- RNA–ligand binding affinity prediction
+- Molecular dynamics trajectory analysis
+- Frame-wise affinity monitoring
+- RNA–ligand stability assessment
+- RNA-targeted drug discovery studies
+
+---
 
 ## Citation
 
 If you use RNALigGUI in your research, please cite:
 
-Sharma P., Latha N., Aggarwal L., Pant P. RNALig: A machine learning-based structure-driven scoring function for estimating binding affinities of RNA–ligand complexes.
+Sharma P., Gupta T., Latha N., Pant P.
 
-## Web Server
+**RNALig Web Server: An ML-Driven Platform for RNA–Ligand Binding Affinity Prediction and MD Trajectory Analysis.**
 
-[https://rnalig-gui.streamlit.app/]
+---
+
+## Related Resources
+
+### RNALig
+
+https://github.com/Computational-biolab/RNALig
+
+### RNALig Web Server
+
+https://rnalig-gui.streamlit.app
+
+---
 
 ## Contact
 
-Developed By: Priyanka Sharma, PhD Scholar Biotechnology
-Bennett University, Greater Noida Uttarpradesh
+**Priyanka Sharma**  
+NextGen Computational Biology Lab  
+Department of Biotechnology  
+Bennett University, India
+
+For questions or suggestions, please open an issue in this repository.
+
+---
+
+## License
+
+This repository contains documentation, example files, screenshots, and user resources for RNALigGUI.
