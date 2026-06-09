@@ -115,7 +115,7 @@ https://rnalig-gui.streamlit.app
 ## Contact
 
 **Priyanka Sharma**  
-NextGen Computational Biology Lab  
+PhD Scholar 
 Department of Biotechnology  
 Bennett University, India
 
